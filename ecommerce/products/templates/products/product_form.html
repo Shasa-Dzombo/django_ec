@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Product form</title>
-	</head>
-<body>
-
-	<h2>{% if form.instance.pk %}Edit Product{% else %}Add Product{% endif %}</h2>
-	<form method="POST">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<button type="submit">Save</button>
-	</form>
-	<a href="{% url 'product_list' %}">Back</a>
-</body>
-</html>
+<form method='POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type='submit'>Add Product</button>
+</form>
